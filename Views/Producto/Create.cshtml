@@ -1,0 +1,43 @@
+﻿@model PuntoVenta.Datos.Producto
+
+@{
+    ViewBag.Title = "Nuevo producto";
+}
+
+<h2>Nuevo producto</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Producto</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProductoNombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProductoNombre)
+            @Html.ValidationMessageFor(model => model.ProductoNombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProductoDescripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProductoDescripcion)
+            @Html.ValidationMessageFor(model => model.ProductoDescripcion)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Volver a la lista", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

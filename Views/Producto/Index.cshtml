@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PuntoVenta.Datos.Producto>
+
+@{
+    ViewBag.Title = "Productos";
+}
+
+<h2>Lista de productos</h2>
+
+<p>
+    @Html.ActionLink("Nuevo producto", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Descripción
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductoNombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductoDescripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ProductoId }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.ProductoId }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.ProductoId })
+        </td>
+    </tr>
+}
+
+</table>

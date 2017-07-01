@@ -1,0 +1,32 @@
+﻿@model PuntoVenta.Datos.Producto
+
+@{
+    ViewBag.Title = "Borrar producto";
+}
+
+<h2>Vas a borrar un producto</h2>
+
+<h3>¿Estás seguro de borrar este producto?</h3>
+<fieldset>
+    <legend>Producto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductoNombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductoNombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductoDescripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductoDescripcion)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Borrar" /> |
+        @Html.ActionLink("Volver a la lista", "Index")
+    </p>
+}

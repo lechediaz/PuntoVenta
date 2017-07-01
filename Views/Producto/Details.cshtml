@@ -1,0 +1,29 @@
+﻿@model PuntoVenta.Datos.Producto
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<fieldset>
+    <legend>Producto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductoNombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductoNombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductoDescripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductoDescripcion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProductoId }) |
+    @Html.ActionLink("Volver a la lista", "Index")
+</p>

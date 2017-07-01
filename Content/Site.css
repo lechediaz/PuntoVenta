@@ -1,0 +1,100 @@
+﻿body {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color:#fee;
+    text-decoration:none;
+    font-weight:600;
+}
+    a:hover, a:visited, a:active {
+         color:#fee;
+    }
+
+h1, h2, h3 {
+    margin:0;
+}
+
+#Encabezado {
+    background-color: rgb(187, 186, 98);
+    padding-bottom: 4px;
+    padding-left:30px;
+}
+
+#Contenido {
+    background-color: rgb(60, 100, 120);
+    padding-bottom: 10px;
+    padding-left:30px;
+}
+
+#Menu {
+    background-color:rgba(65, 59, 59, 0.94);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding:4px;
+    /*position:fixed;*/
+}
+
+    #Menu ul {
+        list-style:none;
+        padding-left: 30px;
+    }
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
